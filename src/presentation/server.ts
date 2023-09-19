@@ -17,7 +17,7 @@ export class Server {
 
         console.log('Server started...');
 
-        new SendEmailLogs(emailService, fileSystemLogRepository).execute(['aguscastets@gmail.com'])
+        // new SendEmailLogs(emailService, fileSystemLogRepository).execute(['aguscastets@gmail.com'])
         // CronService.createJob(
         //     '*/5 * * * * *',
         //     () => {
