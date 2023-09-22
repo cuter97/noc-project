@@ -26,19 +26,19 @@ export class Server {
 
         console.log('Server started...');
 
-        CronService.createJob(
-            '*/10 * * * * *',
-            () => {
-                const url = 'https://google.com';
+        // CronService.createJob(
+        //     '*/10 * * * * *',
+        //     () => {
+        //         const url = 'https://google.com';
 
-                new CheckServiceMultiple(
-                    [fsLogRepository, mongoLogRepository, postgresLogRepository],
-                    () => console.log(`${url} is ok`),
-                    (error) => console.log(error),
-                ).execute(url);
+        //         new CheckServiceMultiple(
+        //             [fsLogRepository, mongoLogRepository, postgresLogRepository],
+        //             () => console.log(`${url} is ok`),
+        //             (error) => console.log(error),
+        //         ).execute(url);
 
-            }
-        );
+        //     }
+        // );
 
         // new SendEmailLogs(emailService, logRepository).execute(['aguscastets@gmail.com'])
         // const emailService = new EmailService(logRepository);
